@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Persona
 
-## Getting Started
+- Seller / lender
+- Buyer / renter
+- Admin
 
-First, run the development server:
+### Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- An online store to help anyone buy/sell/rent/lend used books.
+- A home page to promote.
+- A way to sign up and login.
+- A way to list down books with details like name, image, stock ,price, etc.
+- A way to see book details.
+- A way to add or move books to the cart.
+- A way to pay and checkout.
+- A way to say order success/ failure.
+- A way to track order.
+- A way for users to submit a book for sale and rent.
+- A way for users to communicate with each other.
+- A way to notify users.
+- A way to change setting and preferences.
+- A way for admin to check status, inventory, etc.
+- Responsive design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Wireframe
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![wireframe](./wireframe/wireframe.PNG)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Pages
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Home page -> /home
+- Store -> /store
+- Book details -> /store{id}
+- Track order -> /store/track-order
+- Communities -> /store/communities
+- About us -> /store/about
