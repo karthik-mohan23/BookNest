@@ -2,14 +2,16 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div className="relative min-h-screen w-full bg-slate-950 flex items-center justify-center">
+    <div className="relative min-h-screen w-full  flex items-center justify-center">
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
       <div className="flex flex-col gap-5 items-center">
-        <h1 className="text-5xl md:text-8xl font-bold text-white">BookNest</h1>
-        {/* btn */}
+        <h1 className="text-5xl md:text-9xl font-bold text-indigo-100">
+          Book<span className="text-indigo-500">Nest</span>
+        </h1>
         <Link
           href="/store"
-          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gray-200 px-6 font-medium text-black z-20">
-          <span>Go to store</span>
+          className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-indigo-800 px-6 font-medium text-white z-20 hover:bg-indigo-900 duration-300">
+          <span className="hover:scale-105 duration-300">Go to store</span>
           <div className="ml-1 transition duration-300 group-hover:rotate-[360deg]">
             <svg
               width="15"
@@ -27,8 +29,6 @@ function page() {
           </div>
         </Link>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
     </div>
   );
 }
