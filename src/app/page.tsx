@@ -1,10 +1,14 @@
+import Link from "next/link";
+
 function page() {
   return (
     <div className="relative min-h-screen w-full bg-slate-950 flex items-center justify-center">
       <div className="flex flex-col gap-5 items-center">
         <h1 className="text-5xl md:text-8xl font-bold text-white">BookNest</h1>
         {/* btn */}
-        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gray-200 px-6 font-medium text-black z-20">
+        <Link
+          href="/store"
+          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gray-200 px-6 font-medium text-black z-20">
           <span>Go to store</span>
           <div className="ml-1 transition duration-300 group-hover:rotate-[360deg]">
             <svg
@@ -21,7 +25,7 @@ function page() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-        </button>
+        </Link>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
