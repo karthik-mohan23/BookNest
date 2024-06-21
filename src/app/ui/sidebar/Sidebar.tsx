@@ -23,20 +23,19 @@ const links = [
 
 function Sidebar() {
   return (
-    <div className="w-48 border-r border-gray-500 h-screen  flex-col hidden md:flex">
-      <div className="  ">
-        {links.map((link) => {
-          const IconComponent = link.icon;
-          return (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="flex  items-center  gap-2 rounded-md bg-gray-50  text-sm font-medium hover:bg-indigo-600 hover:text-white  justify-start duration-300 py-3">
-              <IconComponent className="w-6" /> {link.name}
-            </Link>
-          );
-        })}
-      </div>
+    <div className="md:w-48 px-2 pt-6  border-r border-gray-500 h-screen  flex-col flex gap-8 md:gap-4">
+      {links.map((link) => {
+        const IconComponent = link.icon;
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            className="flex  items-center  gap-2 rounded-md bg-gray-50  text-sm font-medium hover:bg-indigo-600 hover:text-white  justify-start duration-300 md:py-3">
+            <IconComponent className="w-6" />
+            <span className="hidden md:block">{link.name}</span>
+          </Link>
+        );
+      })}
     </div>
   );
 }
