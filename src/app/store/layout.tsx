@@ -11,9 +11,9 @@ function layout({ children }: { children: React.ReactNode }) {
   return (
     <section>
       <Header />
-      <div className="flex max-w-6xl w[90%] mx-auto">
+      <div className="flex max-w-6xl w[90%] mx-auto relative">
         <Sidebar />
-        {children}
+        <section className="flex-grow ">{children}</section>
       </div>
     </section>
   );

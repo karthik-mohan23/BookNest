@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <nav className="py-4 shadow-lg">
+    <nav className="py-4 shadow-lg ">
       <div className="max-w-6xl w[90%] mx-auto">
         <Link href="/store">
           <h2 className="text-xl font-bold">
