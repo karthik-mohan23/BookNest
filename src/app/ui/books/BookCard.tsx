@@ -17,7 +17,11 @@ function BookCard({ book }: { book: BookListProps }) {
         />
       </div>
       <div className="flex flex-col gap-2 px-2 py-2">
-        <h1 className="text-lg font-semibold">{book.title}</h1>
+        <h1 className="text-lg font-semibold">
+          {book.title.length > 17
+            ? book.title.slice(0, 16) + "..."
+            : book.title}
+        </h1>
         <p>
           Author: <span className="text-lg ">{book.author}</span>
         </p>
