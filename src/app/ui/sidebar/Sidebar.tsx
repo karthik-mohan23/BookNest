@@ -9,6 +9,7 @@ import {
   Squares2X2Icon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/solid";
+import { useCartContext } from "@/app/context/CartContext";
 
 const links = [
   { name: "Books", href: "/store", icon: BookOpenIcon },
@@ -22,6 +23,8 @@ const links = [
 ];
 
 function Sidebar() {
+  const { cartData } = useCartContext();
+
   return (
     <div className="md:w-48 px-2 pt-6 left-0 top-0 sticky max-h-screen  border-r border-gray-400 h-screen  flex-col flex gap-8 md:gap-4">
       {links.map((link) => {

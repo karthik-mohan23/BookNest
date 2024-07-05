@@ -1,8 +1,11 @@
 "use client";
 import { toast } from "sonner";
 import { BookListProps } from "./BookList";
+import { useCartContext } from "@/app/context/CartContext";
 
 function AddToCartButtons({ book }: { book: BookListProps }) {
+  const { cartData, setCartData } = useCartContext();
+
   const addToCart = (reason: string) => {
     toast.success(`${book.title} added to cart`);
     const newData = { ...book, type: reason };
