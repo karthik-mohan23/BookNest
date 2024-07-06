@@ -5,10 +5,8 @@ import AddToCartButtons from "./AddToCartButtons";
 
 function BookCard({ book }: { book: BookListProps }) {
   return (
-    <Link
-      href={`/store/${book.id}`}
-      className=" border border-gray-500 rounded-md p-2">
-      <div>
+    <div className=" border border-gray-500 rounded-md p-2">
+      <Link href={`/store/${book.id}`}>
         <Image
           src={book.cover}
           alt={book.title}
@@ -16,7 +14,7 @@ function BookCard({ book }: { book: BookListProps }) {
           height={100}
           className=" object-fill w-full h-80 hover:scale-105 duration-300 p-2"
         />
-      </div>
+      </Link>
       <div className="flex flex-col  px-2 py-2">
         <h1 className="text-lg font-semibold">
           {book.title.length > 17
@@ -38,7 +36,7 @@ function BookCard({ book }: { book: BookListProps }) {
         </div>
         <AddToCartButtons book={book} />
       </div>
-    </Link>
+    </div>
   );
 }
 export default BookCard;
