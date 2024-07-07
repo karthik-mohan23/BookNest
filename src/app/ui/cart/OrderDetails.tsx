@@ -19,13 +19,13 @@ function OrderDetails() {
   }, 0);
 
   return (
-    <div>
-      <h3 className="text-2xl pb-2">Order details</h3>
+    <div className="py-5 max-w-md border border-gray-500 rounded-lg  px-5">
+      <h3 className="text-2xl pb-2 font-semibold pb-3">Order details</h3>
       <div>
-        <p>
+        <p className="font-semibold text-lg">
           Buying {booksToBuy.length} for &#x20B9;{priceForBuying}.
         </p>
-        <p>
+        <p className="font-semibold text-lg">
           Renting {booksToRent.length} for &#x20B9;{priceForRenting}.
         </p>
       </div>

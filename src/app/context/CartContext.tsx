@@ -21,6 +21,7 @@ type BookDetailsProps = {
 type BookCartProps = {
   cartData: BookDetailsProps[];
   addToCart: (book: BookDetailsProps) => void;
+  deleteFromCart: (id: string) => void;
 };
 const CartContext = createContext<BookCartProps | null>(null);
 
@@ -38,8 +39,14 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   const addToCart = (book: BookDetailsProps) => {
     setCartData((prev) => [...prev, book]);
   };
+  const deleteFromCart = (id: string) => {
+    setCartData((prevCart) => {
+      const filteredCart = prevCart.filter((item) => item.id !== id);
+      return filteredCart;
+    });
+  };
   return (
-    <CartContext.Provider value={{ cartData, addToCart }}>
+    <CartContext.Provider value={{ cartData, addToCart, deleteFromCart }}>
       {children}
     </CartContext.Provider>
   );

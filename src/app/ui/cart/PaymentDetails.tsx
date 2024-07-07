@@ -12,9 +12,11 @@ function PaymentDetails() {
   };
 
   return (
-    <div className="max-w-md">
-      <h3 className="text-2xl py-4 lg:pt-0 lg:pb-4">Payment Details</h3>
-      <form className="space-y-2" onSubmit={handlePayment}>
+    <div className="max-w-md border border-gray-500 rounded-lg py-5 px-10">
+      <h3 className="text-2xl py-4 lg:pt-0 lg:pb-4 font-semibold text-center">
+        Payment Details
+      </h3>
+      <form className="space-y-3" onSubmit={handlePayment}>
         <div className="flex flex-col gap-1">
           <label htmlFor="cardNumber">Card number</label>
           <input
