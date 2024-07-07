@@ -28,7 +28,7 @@ function Sidebar() {
   const cartDataLength = cartData.length;
 
   return (
-    <div className="md:w-48 px-2 pt-6 left-0 top-0 sticky max-h-screen  border-r border-gray-400 h-screen  flex-col flex gap-8 md:gap-4">
+    <div className="md:w-48 px-2 pt-6 left-0 top-0 sticky max-h-screen  border-r border-gray-400 h-screen  flex-col flex gap-8 md:gap-4 ">
       {links.map((link) => {
         const IconComponent = link.icon;
         return link.name === "Cart" ? (
